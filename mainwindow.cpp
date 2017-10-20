@@ -47,9 +47,9 @@ void MainWindow::setTableRange()
     range->setColumnWidth(4,260);
     range->setHorizontalHeaderItem(0, new QTableWidgetItem(tr("х")));
     range->setHorizontalHeaderItem(1, new QTableWidgetItem(tr("+-")));
-    range->setHorizontalHeaderItem(2, new QTableWidgetItem(tr("DateStart")));
-    range->setHorizontalHeaderItem(3, new QTableWidgetItem(tr("DateEnd")));
-    range->setHorizontalHeaderItem(4, new QTableWidgetItem(tr("Comment")));
+    range->setHorizontalHeaderItem(2, new QTableWidgetItem(tr("Начало")));
+    range->setHorizontalHeaderItem(3, new QTableWidgetItem(tr("Конец")));
+    range->setHorizontalHeaderItem(4, new QTableWidgetItem(tr("Комментарий")));
     range->setShowGrid(true);
     range->setSelectionMode(QAbstractItemView::SingleSelection);
     range->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -247,7 +247,7 @@ void MainWindow::createMainWindow()
     p = QApplication::applicationDirPath();
     p.append("/base.db");
     qDebug() << p;
-    c->createConnectionMYSQLite("/mnt/tmpfs/base.db");
+    c->createConnectionMYSQLite("/media/bigdata/home/alexandr1/Qt_new/myprog/work_experience/src/base.db");
     db = QSqlDatabase::addDatabase("QSQLITE");
     if (!db.open())
     {
@@ -435,9 +435,10 @@ void MainWindow::searchUser()
 void MainWindow::about()
 {
     QMessageBox *message = new QMessageBox();
-    message->information(this, "О программе",  "\"Опыт работы\" версия 1.1. "
+    message->information(this, "О программе",  "\"Опыт работы\" версия 1.1.1 "
    " Разработчик - Красовский Александр Вячеславович. E-mail для связи - krasovsky.av@yandex.ru "
-   " Официальный сайт - www.sitefresh.net", "ОК");
+   " Официальный сайт - www.sitefresh.net \n MIT License"
+   "\n https://github.com/ggshaman888/work_experience", "ОК");
 
 }
 
