@@ -247,7 +247,7 @@ void MainWindow::createMainWindow()
     p = QApplication::applicationDirPath();
     p.append("/base.db");
     qDebug() << p;
-    c->createConnectionMYSQLite("/media/bigdata/home/alexandr1/Qt_new/myprog/work_experience/src/base.db");
+    c->createConnectionMYSQLite(p);
     db = QSqlDatabase::addDatabase("QSQLITE");
     if (!db.open())
     {
