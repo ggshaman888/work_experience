@@ -2,7 +2,7 @@
 #define FINDUSER_H
 
 #include <QObject>
-
+#include <QStringList>
 class FindUser : public QObject
 {
     Q_OBJECT
