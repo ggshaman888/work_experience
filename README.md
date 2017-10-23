@@ -1,4 +1,5 @@
-# email_server
-Server email distribution for private mailing lists
+# work_experience
+Counting of experience in Russia and storage of results
+Qt 5.9
 
-System requirements: Ubuntu 16.04, mutt email client
+Программа "Опыт работы" предназначена для подсчёта опыта работы резидента РФ. 
