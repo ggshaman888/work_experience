@@ -249,10 +249,6 @@ void MainWindow::createMainWindow()
     qDebug() << p;
     c->createConnectionMYSQLite(p);
     db = QSqlDatabase::addDatabase("QSQLITE");
-    if (!db.open())
-    {
-        QMessageBox::warning( 0 , "Ошибка!", db.lastError().databaseText());
-    }
 
     user = new FindUser();
     connect(user, SIGNAL(returnUser(FindUser::User)), this, SLOT(returnUser(FindUser::User)));
@@ -435,7 +431,7 @@ void MainWindow::searchUser()
 void MainWindow::about()
 {
     QMessageBox *message = new QMessageBox();
-    message->information(this, "О программе",  "\"Опыт работы\" версия 1.1.1 "
+    message->information(this, "О программе",  "\"Опыт работы\" версия 1.1.2 "
    " Разработчик - Красовский Александр Вячеславович. E-mail для связи - krasovsky.av@yandex.ru "
    " Официальный сайт - www.sitefresh.net \n MIT License"
    "\n https://github.com/ggshaman888/work_experience", "ОК");
